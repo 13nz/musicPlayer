@@ -1,4 +1,5 @@
 org/example/PrimaryController.class
 module-info.class
+org/example/Starter.class
 org/example/App.class
 org/example/PrimaryController$1.class
