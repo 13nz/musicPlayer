@@ -1,0 +1,6 @@
+jpackage --input target/ \
+  --name musicPlayer\
+  --main-jar musicPlayer-1.0-SNAPSHOT-jar-with-dependencies.jar \
+  --main-class org.example.Starter \
+  --type dmg \
+  --icon cd.icns \
