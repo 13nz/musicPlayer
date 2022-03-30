@@ -51,6 +51,8 @@ public class PrimaryController implements Initializable {
             speedBox.getItems().add(speed + "%");
         }
 
+
+
         speedBox.setOnAction(this::changeSpeed);
 
         volumeSlider.valueProperty().addListener((observableValue, number, t1) -> player.setVolume(volumeSlider.getValue() * 0.01));
@@ -81,6 +83,7 @@ public class PrimaryController implements Initializable {
                     System.out.println(songPosition);
 
                     player.seek(Duration.seconds(songPosition));
+
                 });
 
 
@@ -170,8 +173,12 @@ public class PrimaryController implements Initializable {
         media = new Media(songs.get(songNumber).toURI().toString());
         player = new MediaPlayer(media);
 
+        player.setAutoPlay(true);
+        player.setOnEndOfMedia(this::nextMedia);
+
         songLabel.setText(songs.get(songNumber).getName());
         playMedia();
+
     }
 
     public void selectFiles() {
@@ -201,6 +208,5 @@ public class PrimaryController implements Initializable {
         Collections.shuffle(songs);
         initSongs();
     }
-
 
 }

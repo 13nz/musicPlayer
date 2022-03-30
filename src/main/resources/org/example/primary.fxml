@@ -44,7 +44,7 @@
       </Button>
       <ComboBox fx:id="speedBox" layoutX="541.0" layoutY="127.0" prefHeight="34.0" prefWidth="153.0" promptText="SPEED" />
       <Slider fx:id="volumeSlider" layoutX="181.0" layoutY="185.0" max="100.0" prefHeight="34.0" prefWidth="342.0" value="50.0" />
-      <Button fx:id="btn" layoutX="9.0" layoutY="11.0" mnemonicParsing="false" onAction="#selectFiles" prefHeight="25.0" prefWidth="81.0" text="Select" />
+      <Button fx:id="btn" layoutX="9.0" layoutY="11.0" mnemonicParsing="false" onAction="#selectFiles" prefHeight="25.0" prefWidth="81.0" text="Open" />
       <ToggleButton fx:id="toggleShuffle" layoutX="14.0" layoutY="194.0" mnemonicParsing="false" onAction="#shuffle" text="Shuffle" />
    </children>
 </AnchorPane>
