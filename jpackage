@@ -4,3 +4,21 @@ jpackage --input target/ \
   --main-class org.example.Starter \
   --type dmg \
   --icon cd.icns \
+
+
+
+  jpackage --input target/ \
+    --name musicPlayer\
+    --main-jar musicPlayer-1.0-SNAPSHOT-jar-with-dependencies.jar \
+    --main-class org.example.Starter \
+    --type exe \
+    --icon cd.ico \
+
+
+jpackage ^
+--input target/ ^
+--name musicPlayer ^
+--main-jar musicPlayer-1.0-SNAPSHOT-jar-with-dependencies.jar ^
+--main-class org.example.Starter ^
+--type app-image ^
+--icon cd.ico

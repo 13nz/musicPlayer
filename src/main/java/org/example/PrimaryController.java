@@ -11,6 +11,7 @@ import javafx.stage.FileChooser;
 import javafx.util.Duration;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
@@ -70,7 +71,8 @@ public class PrimaryController implements Initializable {
 
                 songProgressBar.setProgress(progress);
 
-                Media file = new Media("file://" + songs.get(songNumber).getAbsolutePath().replaceAll(" ","%20"));
+                //Media file = new Media(songs.get(songNumber).getAbsolutePath().replaceAll(" ","%20"));
+                Media file = new Media(songs.get(songNumber).toURI().toString());
                 MediaPlayer newPlayer = new MediaPlayer(file);
 
                 newPlayer.setOnReady(() -> {
